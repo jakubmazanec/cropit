@@ -10,7 +10,7 @@ class Zoomer {
     if (minZoom === 'fit') {
       this.minZoom = Math.min(widthRatio, heightRatio);
     } else if (typeof minZoom === 'number') {
-      this.minZoom = Math.max(minZoom, 0.1);
+      this.minZoom = Math.min(widthRatio, heightRatio) * Math.max(minZoom, 0.1);
     }
     else {
       this.minZoom = Math.max(widthRatio, heightRatio);
