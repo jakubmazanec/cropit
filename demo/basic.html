@@ -50,8 +50,11 @@
     <script>
       $(function() {
         $('.image-editor').cropit({
+          // freeMove: true,
+          smallImage: 'allow',
+          minZoom: 0.1,
           imageState: {
-            src: 'http://lorempixel.com/500/400/',
+            src: 'http://placehold.it/500x350',
           },
         });
 
